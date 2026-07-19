@@ -1,0 +1,78 @@
+/* =========================================================
+   SERVICE.CSS — Dental Home services page
+   ========================================================= */
+
+.services-page { padding: 70px 0 110px; }
+.services-page .page-head { max-width: 720px; margin: 0 auto 56px; text-align: center; }
+.services-page .page-head p { margin-top: 14px; }
+
+.services-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.service-card {
+  position: relative;
+  min-height: 340px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background-image:
+    linear-gradient(180deg, rgba(27,20,15,.15) 0%, rgba(27,20,15,.55) 55%, rgba(27,20,15,.92) 100%),
+    var(--bg-img);
+  background-size: cover;
+  background-position: center;
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 50px rgba(27,20,15,.22);
+}
+
+.service-card-inner {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 26px 24px 24px;
+  color: #fff;
+}
+.service-card-inner h2 {
+  color: #fff;
+  font-size: 21px;
+  margin-bottom: 8px;
+}
+.service-card-inner p {
+  color: rgba(255,255,255,.85);
+  font-size: 14px;
+  line-height: 1.55;
+  margin-bottom: 16px;
+}
+.service-card-inner .btn-sm {
+  padding: 9px 18px;
+  font-size: 12.5px;
+}
+
+.services-cta {
+  margin-top: 70px;
+  text-align: center;
+  background: var(--bg-soft);
+  border-radius: var(--radius-lg);
+  padding: 56px 30px;
+}
+.services-cta h2 { margin-bottom: 10px; }
+.services-cta p { max-width: 480px; margin: 0 auto 26px; }
+.services-cta-actions { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+
+.btn-outline-dark { background: transparent; border: 2px solid var(--dark); color: var(--dark); border-radius: var(--radius-pill); padding: 15px 30px; font-weight: 700; display: inline-block; transition: var(--transition); }
+.btn-outline-dark:hover { background: var(--dark); color: #fff; }
+
+@media (max-width: 1080px) {
+  .services-card-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .services-page { padding: 50px 0 80px; }
+  .services-card-grid { grid-template-columns: 1fr; }
+  .service-card { min-height: 300px; }
+  .services-cta { padding: 40px 22px; margin-top: 50px; }
+}
