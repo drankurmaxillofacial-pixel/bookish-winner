@@ -458,7 +458,7 @@ h2.center { text-align: center; margin-bottom: 50px; }
   .services-list { grid-template-columns: 1fr; }
   .doctor-facts { grid-template-columns: 1fr 1fr; }
   .highlights-grid { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr; text-align: left; }
+  .footer-grid { grid-template-columns: 1fr 1fr; text-align: left; }
   .appointment-card { padding: 28px 20px; }
   .hero-cta { flex-direction: column; align-items: stretch; }
   .hero-cta .btn { width: 100%; }
