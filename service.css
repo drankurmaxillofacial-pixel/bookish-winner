@@ -1,0 +1,107 @@
+/* =========================================================
+   SERVICE.CSS — Dental Home services page
+   ========================================================= */
+
+.services-page { padding: 70px 0 110px; }
+.services-page .page-head { max-width: 720px; margin: 0 auto 56px; text-align: center; }
+.services-page .page-head p { margin-top: 14px; }
+
+.services-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 26px;
+  scroll-margin-top: 100px;
+}
+.services-card-grid .service-card { scroll-margin-top: 100px; }
+
+.service-card {
+  position: relative;
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 28px 24px 24px;
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 50px rgba(27,20,15,.16);
+}
+
+.service-card-inner h2 {
+  color: var(--text-dark);
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.service-card-inner p {
+  color: var(--text-light);
+  font-size: 14.5px;
+  line-height: 1.65;
+  margin-bottom: 18px;
+}
+.service-card-inner .btn-sm {
+  padding: 9px 18px;
+  font-size: 12.5px;
+}
+
+.services-cta {
+  margin-top: 70px;
+  text-align: center;
+  background: var(--bg-soft);
+  border-radius: var(--radius-lg);
+  padding: 56px 30px;
+}
+.services-cta h2 { margin-bottom: 10px; }
+.services-cta p { max-width: 480px; margin: 0 auto 26px; }
+.services-cta-actions { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+
+.btn-outline-dark { background: transparent; border: 2px solid var(--dark); color: var(--dark); border-radius: var(--radius-pill); padding: 15px 30px; font-weight: 700; display: inline-block; transition: var(--transition); }
+.btn-outline-dark:hover { background: var(--dark); color: #fff; }
+
+@media (max-width: 640px) {
+  .services-page { padding: 50px 0 80px; }
+  .services-cta { padding: 40px 22px; margin-top: 50px; }
+}
+
+/* ---- Maxillofacial Surgery feature section ---- */
+.maxillofacial-feature {
+  margin-top: 70px;
+  scroll-margin-top: 100px;
+  background: var(--bg-soft);
+  border-radius: var(--radius-lg);
+  padding: 56px 40px;
+}
+.mf-head { max-width: 760px; margin: 0 auto 40px; text-align: center; }
+.mf-head h2 { font-size: clamp(26px, 3vw, 34px); margin-bottom: 14px; }
+
+.mf-body { display: grid; grid-template-columns: .8fr 1.2fr; gap: 46px; align-items: start; }
+.mf-media { display: flex; flex-direction: column; gap: 16px; position: sticky; top: 100px; }
+.mf-media img { border-radius: var(--radius-lg); box-shadow: var(--shadow-card); object-fit: cover; width: 100%; }
+
+.mf-content h3 { font-size: 19px; margin: 0 0 18px; }
+.mf-content h3:not(:first-child) { margin-top: 34px; }
+
+.mf-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.mf-item { background: #fff; border-radius: var(--radius-md); padding: 18px 18px 16px; box-shadow: var(--shadow-card); }
+.mf-item h4 { font-size: 15px; margin-bottom: 6px; color: var(--accent-dark); }
+.mf-item p { font-size: 13.5px; line-height: 1.55; color: var(--text-light); margin: 0; }
+
+.mf-checklist { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.mf-checklist li { display: flex; align-items: center; gap: 10px; font-weight: 600; color: var(--text-dark); }
+.mf-check {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 22px; height: 22px; border-radius: 50%; background: var(--accent);
+  color: #fff; font-size: 12px; flex-shrink: 0;
+}
+
+.mf-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 30px; }
+
+@media (max-width: 900px) {
+  .mf-body { grid-template-columns: 1fr; }
+  .mf-media { position: static; }
+}
+@media (max-width: 640px) {
+  .maxillofacial-feature { padding: 36px 20px; margin-top: 50px; }
+  .mf-grid { grid-template-columns: 1fr; }
+  .mf-actions { flex-direction: column; }
+  .mf-actions .btn { width: 100%; text-align: center; }
+}
