@@ -1,0 +1,3 @@
+# Netlify redirect rule — use this INSTEAD of blog.html's meta-refresh if you host on Netlify.
+# Delete blog.html if you add this file.
+/blog.html  /blog/  301

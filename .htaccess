@@ -1,0 +1,3 @@
+# Apache redirect rule — use this INSTEAD of blog.html's meta-refresh if you host on Apache (cPanel/shared hosting).
+# Delete blog.html if you add this file.
+Redirect 301 /blog.html /blog/
