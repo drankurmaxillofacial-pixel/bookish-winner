@@ -494,6 +494,9 @@ h2.center { text-align: center; margin-bottom: 50px; }
   .highlights { padding: 10px 0 60px; }
   .gallery, .appointment, .blog { padding: 0 0 60px; }
 
+.areas-grid { grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; }
+.area-chip { padding: 10px 14px; font-size: 13px; }
+
   .media-grid { grid-template-columns: 1fr 1fr; }
   .services-list { grid-template-columns: 1fr; }
   .home-services-grid { grid-template-columns: 1fr; }
@@ -576,7 +579,35 @@ p { font-weight: 450; }
 .faq-item[open] summary::after { content: "\2212"; }
 .faq-item p { padding: 0 0 20px; margin: 0; }
 
+/* ===== Areas We Serve ===== */
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 14px;
+  margin: 30px 0;
+}
+.area-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-soft);
+  border: 1px solid #EFE5D8;
+  border-radius: var(--radius-pill);
+  padding: 12px 18px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-dark);
+  justify-content: center;
+}
+.area-chip .pin { font-size: 14px; }
+.areas-note {
+  text-align: center;
+  margin-top: 10px;
+  color: var(--text-light);
+}
+
 /* ===== Breadcrumb (subpages) ===== */
+
 .breadcrumb-bar { background: var(--bg-soft); padding: 18px 0; }
 .breadcrumb-bar ol { list-style: none; display: flex; gap: 8px; margin: 0; padding: 0; font-size: 14px; font-weight: 600; }
 .breadcrumb-bar li:not(:last-child)::after { content: "/"; margin-left: 8px; color: var(--text-light); font-weight: 400; }
